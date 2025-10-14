@@ -1,10 +1,42 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 function Images() {
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    const nodes = gridRef.current?.querySelectorAll('[data-fade]');
+    if (!nodes?.length) return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -5% 0px' }
+    );
+
+    nodes.forEach((node, i) => {
+      node.style.transitionDelay = `${i * 120}ms`;
+      io.observe(node);
+    });
+
+    return () => io.disconnect();
+  }, []);
+
   return (
-    <section className=' py-20 sm:py-24 lg:py-2'>
-      <div className='grid lg:grid-cols-2 md:grid-cols-1 text-left'>
-        <div className='mx-[6%]'>
+    <section className=' py-20 sm:py-24 lg:py-20'>
+      <div
+        className='grid lg:grid-cols-2 md:grid-cols-1 text-left'
+        ref={gridRef}
+      >
+        <div
+          className='mx-[6%] fade-item'
+          data-fade
+        >
           <img
             className='border-1 md:h-[60%] '
             src='https://img.freepik.com/premium-vector/futuristic-background-concept_23-2148473541.jpg'
@@ -20,7 +52,7 @@ function Images() {
           <button
             href='#'
             type='button'
-            className=' inline-flex items-center  gap-2 font-semibold my-4'
+            className=' group inline-flex items-center  gap-2 font-semibold my-4'
           >
             See more
             <svg
@@ -38,7 +70,10 @@ function Images() {
           </button>
         </div>
 
-        <div className='mx-[6%]'>
+        <div
+          className='mx-[6%] fade-item'
+          data-fade
+        >
           <img
             className='border-1 md:h-[60%]'
             src='https://www.creativefabrica.com/wp-content/uploads/2021/09/14/Abstract-futuristic-blue-background-Graphics-17251979-1.jpg'
@@ -54,7 +89,7 @@ function Images() {
           <button
             type='button'
             href='#'
-            className=' inline-flex items-center gap-2 font-semibold  my-4'
+            className=' group inline-flex items-center gap-2 font-semibold  my-4'
           >
             See more
             <svg

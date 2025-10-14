@@ -10,38 +10,37 @@ function Pricing() {
       <h1 className='text-3xl font-bold'>Pricing plan</h1>
       <p className='text-xl font-light mt-3 mb-4'>Some text about pricing</p>
 
-      {/* BOXES */}
-      <div className=' border-2 p-2 flex lg:w-[20%] md:w-[40%] mx-auto '>
-        <div className=' flex items-center justify-center mx-auto '>
-          <button
-            className={`px-4 py-2 font-semibold transition 
-            ${
-              active === 'monthly'
-                ? 'bg-accent text-white border-2 border-black'
-                : 'bg-transparent text-gray-600'
-            }
+      {/* TOGGLE */}
+      <div className='mx-auto w-[min(320px,90%)]'>
+        <div className=' relative border p-1 '>
+          <span
+            className={`absolute inset-y-1 left-1 w-1/2  bg-[var(--color-accent)] transition-transform duration-300 ease-out`}
+            style={{
+              transform:
+                active === 'yearly' ? 'translateX(95%)' : 'translateX(0%)',
+            }}
+            aria-hidden='true'
+          />
+          <div className='relative grid grid-cols-2'>
+            <button
+              type='button'
+              className={`z-10 px-4 py-2 font-semibold 
+          
           `}
-            onClick={() => setActive('monthly')}
-          >
-            Monthly
-          </button>
-          <button
-            className={`px-4 py-2 font-semibold transition 
-            ${
-              active === 'yearly'
-                ? 'bg-accent text-white border-2 border-black'
-                : 'bg-transparent text-gray-600'
-            }
-          `}
-            onClick={() => setActive('yearly')}
-          >
-            Yearly
-          </button>
-
-          {/* <div className='border-1'>Monthly</div>
-          <div className='border-1'>Yearly</div> */}
+              onClick={() => setActive('monthly')}
+            >
+              Monthly
+            </button>
+            <button
+              className={`z-10 px-4 py-2 font-semibold `}
+              onClick={() => setActive('yearly')}
+            >
+              Yearly
+            </button>
+          </div>
         </div>
       </div>
+      {/* BOXES */}
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-10  items-stretch'>
         <PricingBox
           price={active === 'monthly' ? '19$/mo' : '190$/mo'}
