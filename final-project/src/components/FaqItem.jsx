@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function FaqItem({ questionText, anwserText }) {
+  const [open, setOpen] = useState(false);
   return (
-    <div className='border-1 '>
+    <div className='border-1 my-4 '>
       <button
         onClick={() => setOpen(!open)}
         aria-expanded={open}
         href='#'
         className='w-full flex items-center justify-between text-left px-3 py-2'
       >
-        <h3 className='font-bold text-xl mx-2'>Qustion text goes here</h3>
-        <div className='mx-2 my-2'>
+        <h3 className='font-bold text-xl mx-2'>{questionText}</h3>
+        <div className='px-2 py-2'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             viewBox='0 0 24 24'
@@ -31,24 +32,9 @@ function FaqItem({ questionText, anwserText }) {
           </svg>
         </div>
       </button>
-      <div className={`${open ? 'mt-3' : 'mt-0 hidden'}`}>
-        <p className='p-2'>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
-        </p>
+      <div className={`${open ? 'my-3' : 'mt-0 hidden'}`}>
+        <p className='p-2'>{anwserText}</p>
       </div>
-      {/* <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
-        </p> */}
     </div>
   );
 }
