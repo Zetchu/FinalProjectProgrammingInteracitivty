@@ -32,7 +32,7 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className='border-b  bg-white border-[color-mix(in_srgb,var(--color-fg)_12%,transparent)] backdrop-blur supports-[backdrop-filter]:backdrop-blur'>
+    <header className='border-b  border-[color-mix(in_srgb,var(--color-fg)_12%,transparent)] backdrop-blur supports-[backdrop-filter]:backdrop-blur'>
       <div className='mx-auto max-w-7xl pi-fluid py-4 flex items-center justify-between '>
         <a
           href='#'

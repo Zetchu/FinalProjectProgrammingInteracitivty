@@ -5,7 +5,7 @@ function Pricing() {
   const [active, setActive] = useState('monthly');
 
   return (
-    <section className='hero-wrap py-12 sm:py-16 lg:py-20'>
+    <section className='py-12 sm:py-16 lg:py-[2%]'>
       <div className='text-center font-semibold my-6 text-xl'>Tagline</div>
       <h1 className='text-3xl font-bold'>Pricing plan</h1>
       <p className='text-xl font-light mt-3 mb-4'>Some text about pricing</p>

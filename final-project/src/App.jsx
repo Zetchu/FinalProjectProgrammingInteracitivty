@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
+import Images from './components/Images';
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         className='min-h-[70svh]'
       >
         <Hero />
+        <Images />
         <Pricing />
         <FAQ />
       </main>
