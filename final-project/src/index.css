@@ -102,3 +102,17 @@
     @apply opacity-100 translate-y-0;
   }
 }
+
+@layer utilities {
+  .collapsible {
+    @apply overflow-hidden transition-[max-height,opacity,transform] duration-300 ease-out;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+  .collapsible.open {
+    max-height: 40rem;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

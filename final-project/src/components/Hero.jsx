@@ -13,7 +13,7 @@ export default function Hero() {
           Today
         </h1>
 
-        <p className='mt-5 max-w-prose  text-balance text-[clamp(1.05rem,2.5vw,1.25rem)] text-muted'>
+        <p className='mt-5  text-center  text-balance text-[clamp(1.05rem,2.5vw,1.25rem)] text-muted'>
           A minimal, responsive foundation for modern web experiences.
           <br className='hidden sm:block' />
           Clean architecture meets cutting-edge design.

@@ -25,7 +25,7 @@ function PricingBox({ plan, features, price }) {
         ))}
       </ul>
       <div className='justify-center'>
-        <button className='bg-black  text-white font-semibold w-[90%] my-[5%] mt-[20%] py-3 hover:bg-accent transition'>
+        <button className=' bg-[var(--color-fg)] text-[var(--color-bg)] font-semibold w-[90%] my-[5%] mt-[20%] py-3 hover:bg-accent transition'>
           <a
             href=''
             target='_blank'

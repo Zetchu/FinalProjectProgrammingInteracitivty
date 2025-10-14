@@ -25,14 +25,23 @@ function Pricing() {
             <button
               type='button'
               className={`z-10 px-4 py-2 font-semibold 
-          
+                ${
+                  active === 'monthly'
+                    ? 'text-[var(--color-bg)]'
+                    : 'text-[var(--color-fg)]'
+                }
           `}
               onClick={() => setActive('monthly')}
             >
               Monthly
             </button>
             <button
-              className={`z-10 px-4 py-2 font-semibold `}
+              className={`z-10 px-4 py-2 font-semibold 
+                  ${
+                    active === 'yearly'
+                      ? 'text-[var(--color-bg)]'
+                      : 'text-[var(--color-fg)]'
+                  }`}
               onClick={() => setActive('yearly')}
             >
               Yearly

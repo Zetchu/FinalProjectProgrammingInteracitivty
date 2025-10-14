@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 
 function FaqItem({ questionText, anwserText }) {
   const [open, setOpen] = useState(false);
+  const contentId = useId();
   return (
     <div className='border-1 my-4 '>
       <button
@@ -20,7 +21,9 @@ function FaqItem({ questionText, anwserText }) {
             strokeWidth='2'
             strokeLinecap='round'
             strokeLinejoin='round'
-            className='w-5 h-5'
+            className={`w-5 h-5 transition-transform duration-300 ${
+              open ? 'rotate-45' : ''
+            }`}
             aria-hidden='true'
           >
             <circle
@@ -32,7 +35,10 @@ function FaqItem({ questionText, anwserText }) {
           </svg>
         </div>
       </button>
-      <div className={`${open ? 'my-3' : 'mt-0 hidden'}`}>
+      <div
+        id={contentId}
+        className={`px-3 pb-3 collapsible ${open ? 'open' : ''}`}
+      >
         <p className='p-2'>{anwserText}</p>
       </div>
     </div>
