@@ -6,9 +6,14 @@ function Pricing() {
 
   return (
     <section className='py-12 sm:py-16 lg:py-[2%]'>
-      <div className='text-center font-semibold my-6 text-xl'>Tagline</div>
-      <h1 className='text-3xl font-bold'>Pricing plan</h1>
-      <p className='text-xl font-light mt-3 mb-4'>Some text about pricing</p>
+      {/* <div className='text-center font-semibold my-6 text-xl'>
+        Built for makers and teams
+      </div> */}
+      <h1 className='text-3xl font-bold'>Pricing that scales with you</h1>
+      <p className='text-xl font-light mt-3 mb-4'>
+        Transparent usage limits, generous credits, and priority support on
+        higher tiers.
+      </p>
 
       {/* TOGGLE */}
       <div className='mx-auto w-[min(320px,90%)]'>
