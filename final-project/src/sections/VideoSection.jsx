@@ -13,7 +13,7 @@ function VideoSection() {
           <h1
             className='text-2xl sm:text-3xl lg:text-4xl
              font-bold text-left
-             my-4 lg:my-0 fade-tem'
+             my-4 lg:my-0 fade-item'
           >
             Medium long section heading goes here
           </h1>
