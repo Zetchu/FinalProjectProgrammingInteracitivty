@@ -14,7 +14,7 @@ function VideoComponent() {
       (entries) => {
         entries.forEach(async (e) => {
           try {
-            if (e.isIntersecting && e.intersectionRatio >= 0.3) {
+            if (e.isIntersecting && e.intersectionRatio >= 0.5) {
               await vid.play();
             } else {
               vid.pause();
@@ -22,7 +22,7 @@ function VideoComponent() {
           } catch {}
         });
       },
-      { threshold: [0, 0.3, 1] }
+      { threshold: [0, 0.5, 1] }
     );
 
     io.observe(wrap);
