@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FaqItem from './FaqItem';
+import FaqItem from '../components/FaqItem';
 import { FAQ_ITEMS } from '../constants/faqQuestions';
 
 function FAQ() {

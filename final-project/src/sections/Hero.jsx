@@ -13,10 +13,12 @@ export default function Hero() {
           Today
         </h1>
 
-        <p className='mt-5  text-center  text-balance text-[clamp(1.05rem,2.5vw,1.25rem)] text-muted'>
-          A minimal, responsive foundation for modern web experiences.
+        <p className='mt-5 text-center text-balance text-[clamp(1.05rem,2.5vw,1.25rem)] text-muted'>
+          Launch AI features in days, not months. Connect our API, ship your
+          first assistant, and scale to millions—without scaling your infra
+          team.
           <br className='hidden sm:block' />
-          Clean architecture meets cutting-edge design.
+          Private by default, blazingly fast, and designed for real products.
         </p>
 
         <div className='mt-9 flex flex-wrap gap-4 justify-center'>

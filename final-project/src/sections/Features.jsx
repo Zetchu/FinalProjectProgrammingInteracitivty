@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-function Images() {
+function Features() {
   const gridRef = useRef(null);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function Images() {
   return (
     <section className=' py-20 sm:py-24 lg:py-20'>
       <div
-        className='grid lg:grid-cols-2 md:grid-cols-1 text-left'
+        className='grid lg:grid-cols-2 md:grid-cols-2 text-left'
         ref={gridRef}
       >
         <div
@@ -44,10 +44,9 @@ function Images() {
           />
           <h2 className='font-bold text-3xl my-8'>Long heading</h2>
           <p className='mt-10'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sint
-            expedita nostrum architecto deserunt eos minus eveniet odit, tenetur
-            dignissimos repellendus quisquam error ad incidunt totam qui quasi
-            quod dolor!
+            Stream responses under 300ms with conversational memory, tools, and
+            function calling. Drop in our SDK and get typing indicators, retries
+            with jitter, and version pinning out of the box.
           </p>
           <button
             href='#'
@@ -81,10 +80,10 @@ function Images() {
           />
           <h2 className='font-bold text-3xl my-8'>Long heading</h2>
           <p className='mt-10'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sint
-            expedita nostrum architecto deserunt eos minus eveniet odit, tenetur
-            dignissimos repellendus quisquam error ad incidunt totam qui quasi
-            quod dolor!
+            SOC 2–ready controls, SSO/SAML, audit logs, and regional data
+            residency. Your prompts and outputs never train our foundation
+            models unless you opt in. Ship confidently with per-env keys and
+            rate-limit guarantees.
           </p>
           <button
             type='button'
@@ -111,4 +110,4 @@ function Images() {
   );
 }
 
-export default Images;
+export default Features;

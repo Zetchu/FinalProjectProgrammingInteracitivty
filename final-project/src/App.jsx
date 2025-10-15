@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import Pricing from './components/Pricing';
-import FAQ from './components/FAQ';
-import Images from './components/Images';
+import Header from './sections/Header';
+import Footer from './sections/Footer';
+import Hero from './sections/Hero';
+import Pricing from './sections/Pricing';
+import FAQ from './sections/FAQ';
+import VideoSection from './sections/VideoSection';
+import Features from './sections/Features';
 
 export default function App() {
   return (
@@ -16,11 +17,12 @@ export default function App() {
         className='min-h-[70svh]'
       >
         <Hero />
-        <Images />
+        <Features />
         <Pricing />
+        <VideoSection />
         <FAQ />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

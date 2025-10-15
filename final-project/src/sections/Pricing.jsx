@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import PricingBox from './PricingBox';
+import PricingBox from '../components/PricingBox';
 
 function Pricing() {
   const [active, setActive] = useState('monthly');
@@ -53,18 +53,22 @@ function Pricing() {
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-10  items-stretch'>
         <PricingBox
           price={active === 'monthly' ? '19$/mo' : '190$/mo'}
-          features={['Sometext1', 'Sometext2', 'Sometext3']}
+          features={[
+            '5,000 AI credits / month',
+            '1 project • 1 seat included',
+            'Email support (48h SLA)',
+          ]}
           plan={'Baisc plan'}
         />
 
         <PricingBox
           price={active === 'monthly' ? '26$/mo' : '260$/mo'}
           features={[
-            'Sometext1',
-            'Sometext2',
-            'Sometext3',
-            'Sometext3',
-            'Sometext3',
+            '50,000 AI credits / month',
+            'Unlimited projects • 3 seats included',
+            'Priority email & chat support (8h SLA)',
+            'API access with higher rate limits',
+            'Version pinning & model changelogs',
           ]}
           plan={'Expert plan'}
         />
