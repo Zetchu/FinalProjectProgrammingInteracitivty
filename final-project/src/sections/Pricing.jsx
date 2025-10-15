@@ -1,22 +1,25 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import PricingBox from '../components/PricingBox';
+import useStaggeredFadeIn from '../utils/staggeredFadeIn';
 
 function Pricing() {
   const [active, setActive] = useState('monthly');
-
+  const fadeRef = useStaggeredFadeIn({ baseDeplay: 120, threshold: 0.2 });
   return (
-    <section className='py-12 sm:py-16 lg:py-[2%]'>
-      {/* <div className='text-center font-semibold my-6 text-xl'>
-        Built for makers and teams
-      </div> */}
-      <h1 className='text-3xl font-bold'>Pricing that scales with you</h1>
-      <p className='text-xl font-light mt-3 mb-4'>
+    <section
+      ref={fadeRef}
+      className='py-12 sm:py-16 lg:py-[2%]'
+    >
+      <h1 className='text-3xl font-bold fade-item'>
+        Pricing that scales with you
+      </h1>
+      <p className='text-xl font-light mt-3 mb-4 fade-item'>
         Transparent usage limits, generous credits, and priority support on
         higher tiers.
       </p>
 
       {/* TOGGLE */}
-      <div className='mx-auto w-[min(320px,90%)]'>
+      <div className='mx-auto w-[min(320px,90%)] fade-item'>
         <div className=' relative border p-1 '>
           <span
             className={`absolute inset-y-1 left-1 w-1/2  bg-[var(--color-accent)] transition-transform duration-300 ease-out`}
@@ -55,7 +58,7 @@ function Pricing() {
         </div>
       </div>
       {/* BOXES */}
-      <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-10  items-stretch'>
+      <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mt-10  items-stretch fade-item'>
         <PricingBox
           price={active === 'monthly' ? '19$/mo' : '190$/mo'}
           features={[

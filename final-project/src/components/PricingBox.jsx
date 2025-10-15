@@ -12,7 +12,7 @@ function PricingBox({ plan, features, price }) {
             className='flex items-center  mt-2 text-lg'
           >
             <svg
-              className='w-3.5 h-3.5 me-2 text-gray-500 dark:text-gray-400 shrink-0'
+              className='w-3.5 h-3.5 me-2 text-accent dark:text-accent shrink-0'
               aria-hidden='true'
               xmlns='http://www.w3.org/2000/svg'
               fill='currentColor'
