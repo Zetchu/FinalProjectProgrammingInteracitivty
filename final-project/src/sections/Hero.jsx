@@ -1,11 +1,11 @@
 export default function Hero() {
   return (
-    <section className='hero-wrap py-16 sm:py-20 lg:py-24'>
+    <section className='hero-wrap bleed-x p-0 py-16 sm:py-20 lg:py-24'>
       {/* decorative diamond line */}
-      {/* <div
+      <div
         className='hero-diamond'
         aria-hidden='true'
-      /> */}
+      />
 
       <div className='mx-auto max-w-7xl pi-fluid py-20 sm:py-28'>
         <h1 className='font-extrabold leading-tight tracking-tight text-[clamp(2.25rem,7vw,4rem)]'>

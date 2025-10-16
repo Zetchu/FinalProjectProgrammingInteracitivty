@@ -42,7 +42,7 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className='sticky top-0 z-50 border-b bg-bg border-[color-mix(in_srgb,var(--color-fg)_12%,transparent)]'>
+    <header className='sticky bleed-x p-0 top-0 z-50 border-b bg-bg border-[color-mix(in_srgb,var(--color-fg)_12%,transparent)]'>
       <div className='mx-auto max-w-7xl pi-fluid py-4 flex items-center justify-between'>
         {/* Brand */}
         <a

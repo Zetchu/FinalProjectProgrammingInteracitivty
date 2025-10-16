@@ -39,10 +39,11 @@ function Features() {
         >
           <img
             className='border-1 md:h-[60%] '
-            src='https://img.freepik.com/premium-vector/futuristic-background-concept_23-2148473541.jpg'
+            src='
+            https://github.blog/wp-content/uploads/2024/07/maxresdefault-1.jpg?fit=1280%2C720'
             alt='futuristic vector image'
           />
-          <h2 className='font-bold text-3xl my-8'>Long heading</h2>
+          <h2 className='font-bold text-3xl my-8'>Real-time AI copilots</h2>
           <p className='mt-10'>
             Stream responses under 300ms with conversational memory, tools, and
             function calling. Drop in our SDK and get typing indicators, retries
@@ -75,10 +76,10 @@ function Features() {
         >
           <img
             className='border-1 md:h-[60%]'
-            src='https://www.creativefabrica.com/wp-content/uploads/2021/09/14/Abstract-futuristic-blue-background-Graphics-17251979-1.jpg'
+            src=' https://cdn.hashnode.com/res/hashnode/image/upload/v1722416656845/0aad781f-066e-4269-a732-c6d3fccaa7d3.png'
             alt='futuristic vector imag2'
           />
-          <h2 className='font-bold text-3xl my-8'>Long heading</h2>
+          <h2 className='font-bold text-3xl my-8'>Enterprise-grade security</h2>
           <p className='mt-10'>
             SOC 2–ready controls, SSO/SAML, audit logs, and regional data
             residency. Your prompts and outputs never train our foundation

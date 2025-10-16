@@ -21,6 +21,18 @@
 }
 
 @layer utilities {
+  .bleed-x {
+    margin-left: calc(-1 * var(--page-pad));
+    margin-right: calc(-1 * var(--page-pad));
+  }
+
+  .bleed-y {
+    margin-top: calc(-1 * var(--page-pad));
+    margin-bottom: calc(-1 * var(--page-pad));
+  }
+}
+
+@layer utilities {
   /* Desktop-only link animation */
   .nav-link {
     @apply relative inline-flex items-center gap-1 transition-colors duration-200;
@@ -102,25 +114,64 @@
 .hero-wrap {
   position: relative;
   isolation: isolate;
+  --haze1: color-mix(in srgb, var(--color-accent) 14%, transparent);
+  --haze2: color-mix(in srgb, var(--color-accent) 12%, transparent);
   background: radial-gradient(
-      60% 60% at 20% 30%,
-      color-mix(in srgb, var(--color-accent) 12%, transparent) 0%,
-      transparent 60%
+      120% 120% at 20% 30%,
+      var(--haze1) 0%,
+      transparent 70%
     ),
-    radial-gradient(
-      50% 50% at 80% 40%,
-      color-mix(in srgb, var(--color-accent) 10%, transparent) 0%,
-      transparent 60%
-    );
+    radial-gradient(120% 120% at 80% 40%, var(--haze2) 0%, transparent 70%);
+  /* fade to transparent toward the bottom 20% */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 80%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to bottom, #000 0%, #000 80%, transparent 100%);
 }
 
-.hero-diamond {
+.hero-wrap::before {
+  /* diamond (unchanged except z) */
+  content: '';
   position: absolute;
-  inset: 10svh 8svw;
+  left: 50%;
+  top: 50%;
+  width: min(78vmin, 1100px);
+  height: min(78vmin, 1100px);
+  transform: translate(-50%, -50%) rotate(45deg);
   border: 1px solid color-mix(in srgb, var(--color-fg) 18%, transparent);
-  transform: rotate(45deg);
-  pointer-events: none;
+  border-radius: 10px;
   z-index: -1;
+  pointer-events: none;
+}
+
+.hero-wrap::after {
+  /* grid pattern */
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+      45deg,
+      color-mix(in srgb, var(--color-fg) 6%, transparent) 0 1px,
+      transparent 1px 28px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      color-mix(in srgb, var(--color-fg) 5%, transparent) 0 1px,
+      transparent 1px 28px
+    );
+  /* fade bottom to transparent too */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 75%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to bottom, #000 0%, #000 75%, transparent 100%);
 }
 
 @layer utilities {
