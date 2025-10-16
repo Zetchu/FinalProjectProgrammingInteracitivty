@@ -135,7 +135,7 @@
 
 .hero-wrap::before {
   /* diamond (unchanged except z) */
-  content: '';
+  /* content: ''; */
   position: absolute;
   left: 50%;
   top: 50%;
