@@ -41,10 +41,11 @@ function Features() {
           data-fade
         >
           <img
-            className='border-1 md:h-[60%] '
-            src='
-            https://github.blog/wp-content/uploads/2024/07/maxresdefault-1.jpg?fit=1280%2C720'
+            className='border-1 md:h-[50%] lg:h-[60%] '
+            src='https://github.blog/wp-content/uploads/2024/07/maxresdefault-1.jpg?fit=1280%2C720'
             alt='futuristic vector image'
+            fetchpriority='high'
+            decoding='async'
           />
           <h2 className='font-bold text-3xl my-8'>Real-time AI copilots</h2>
           <p className='mt-10'>
@@ -78,9 +79,11 @@ function Features() {
           data-fade
         >
           <img
-            className='border-1 md:h-[60%]'
-            src=' https://cdn.hashnode.com/res/hashnode/image/upload/v1722416656845/0aad781f-066e-4269-a732-c6d3fccaa7d3.png'
+            className='border-1 md:h-[50%] lg:h-[60%]'
+            src='https://cdn.hashnode.com/res/hashnode/image/upload/v1722416656845/0aad781f-066e-4269-a732-c6d3fccaa7d3.png'
             alt='futuristic vector imag2'
+            fetchpriority='high'
+            decoding='async'
           />
           <h2 className='font-bold text-3xl my-8'>Enterprise-grade security</h2>
           <p className='mt-10'>
