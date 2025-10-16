@@ -42,7 +42,8 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header className='sticky bleed-x p-0 top-0 z-50 border-b bg-bg border-[color-mix(in_srgb,var(--color-fg)_12%,transparent)]'>
+    <header className='sticky top-0 inset-x-0 z-50 bg-bg/85 backdrop-blur supports-[backdrop-filter]:backdrop-blur border-b border-[color-mix(in_srgb,var(--color-fg)_12%,transparent)]'>
+      {' '}
       <div className='mx-auto max-w-7xl pi-fluid py-4 flex items-center justify-between'>
         {/* Brand */}
         <a
@@ -67,17 +68,17 @@ export default function Header() {
             <li>
               <a
                 className='hover:underline nav-link'
-                href='#about'
+                href='#pricing'
               >
-                About
+                Pricing
               </a>
             </li>
             <li>
               <a
                 className='hover:underline nav-link'
-                href='#contact'
+                href='#faq'
               >
-                Contact
+                FAQ
               </a>
             </li>
           </ul>
@@ -126,7 +127,6 @@ export default function Header() {
           )}
         </button>
       </div>
-
       {/* Mobile menu: animated panel */}
       <nav
         id='primary-navigation'

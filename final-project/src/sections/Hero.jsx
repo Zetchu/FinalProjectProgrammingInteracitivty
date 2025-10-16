@@ -24,7 +24,7 @@ export default function Hero() {
         <div className='mt-9 flex flex-wrap gap-4 justify-center'>
           <a
             href='#get-started'
-            className='inline-flex items-center gap-2 rounded-md bg-[var(--color-accent)] text-bg px-5 py-3 font-medium elevate transition duration-300 ease-out hover:translate-y-[-1px] focus-visible:outline  focus-visible:outline-[var(--color-accent)]'
+            className='btn-notch btn-notch--primary'
           >
             Get Started
             <svg
@@ -46,7 +46,7 @@ export default function Hero() {
 
           <a
             href='#learn-more'
-            className='inline-flex items-center gap-2 rounded-md border border-[color-mix(in_srgb,var(--color-fg)_35%,transparent)] px-5 py-3 font-medium transition duration-300 ease-out hover:bg-[color-mix(in_srgb,var(--color-fg)_6%,transparent)]'
+            className='btn-notch btn-notch--ghost'
           >
             Learn More
           </a>

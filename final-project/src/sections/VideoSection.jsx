@@ -15,7 +15,7 @@ function VideoSection() {
              font-bold text-left
              my-4 lg:my-0 fade-item'
           >
-            Medium long section heading goes here
+            Production-ready AI in 300 seconds
           </h1>
         </div>
         <div className=''>

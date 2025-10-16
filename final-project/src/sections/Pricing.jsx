@@ -7,6 +7,7 @@ function Pricing() {
   const fadeRef = useStaggeredFadeIn({ baseDeplay: 120, threshold: 0.2 });
   return (
     <section
+      id='pricing'
       ref={fadeRef}
       className='py-12 sm:py-16 lg:py-[2%]'
     >

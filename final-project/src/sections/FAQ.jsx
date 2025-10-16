@@ -7,6 +7,7 @@ function FAQ() {
   const fadeRef = useStaggeredFadeIn({ baseDeplay: 120 });
   return (
     <section
+      id='faq'
       ref={fadeRef}
       className=' py-20 sm:py-24 lg:py-2'
     >
@@ -29,7 +30,7 @@ function FAQ() {
       <p className='text-xl font-light mt-3 mb-4 fade-item'>Don't hesitate!</p>
       <button
         href='#'
-        className='border-1 p-4 fade-item'
+        className='border-1 p-4 fade-item btn-notch btn-notch--primary'
       >
         {' '}
         Contact us

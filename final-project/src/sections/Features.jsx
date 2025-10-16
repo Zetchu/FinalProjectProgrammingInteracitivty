@@ -28,7 +28,10 @@ function Features() {
   }, []);
 
   return (
-    <section className=' py-20 sm:py-24 lg:py-20'>
+    <section
+      id='features'
+      className=' py-20 sm:py-24 lg:py-20'
+    >
       <div
         className='grid lg:grid-cols-2 md:grid-cols-2 text-left'
         ref={gridRef}
@@ -93,7 +96,7 @@ function Features() {
           >
             See more
             <svg
-              className='w-4 h-4 '
+              className='w-4 h-4 transition-transform group-hover:translate-x-0.5'
               viewBox='0 0 24 24'
               fill='none'
               stroke='currentColor'
